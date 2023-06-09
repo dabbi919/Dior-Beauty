@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIOR BEAUTY</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- Google Material Icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <script defer src="./js/jquery.min.js"></script>
+  <script defer src="./js/slick.min.js"></script>
+  <script defer src="./js/slick.js"></script>
+  <!-- Swiper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- lodash : 스크롤을 제어할 수 있는 라이브러리 (내가 만든 css 위에 선언) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- gsap : 자바스크립트 애니메이션 -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- scrollMagic : 스크롤에 따라 해당 영역 감지 -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <!-- topButton : scrollToPlugin -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- js -->
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header-scroll">
+    <div class="header-wrap">
+      <div class="top-header">
+        <div class="icon-left">
+          <a href="#"><img src="./img/icon/location_icon.png" alt="location icon" class="location-icon"></a>
+        </div>
+        <h1><a href="/"><img src="./img/Dior_logo.svg" alt="DIOR logo"></a></h1>
+        <div class="icon-right">
+          <a href="#"><img src="./img/icon/search_icon.png" alt="search icon" class="search-icon"></a>
+          <a href="#"><img src="./img/icon/wishlist_icon.png" alt="wishlist icon" class="wishlist-icon"></a>
+          <a href="#"><img src="./img/icon/user_icon.png" alt="user icon" class="user-icon"></a>
+          <a href="#"><img src="./img/icon/cart_icon.png" alt="cart icon" class="cart-icon"></a>
+        </div>
+      </div>
+      <nav>
+        <ul class="gnb">
+          <li class="main-menu">
+            <a href="#">여성 향수</a>
+            <div class="sub-menu">
+              <div class="sub-inner">
+                <div class="wp-all-sub all-wrap">
+                  <h2><a href="#" class="und-line">모두 보기</a></h2>
+                  <h2><a href="#" class="und-line">신제품</a></h2>
+                  <h2><a href="#" class="und-line">베스트셀러</a></h2>
+                </div>
+                <div class="wp-collection-sub menu-wrap">
+                  <h2><a href="#" class="und-line">컬렉션</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">쟈도르</a></li>
+                    <li><a href="#" class="und-line">미스 디올</a></li>
+                    <li><a href="#" class="und-line">조이 바이 디올</a></li>
+                    <li><a href="#" class="und-line">쁘와종</a></li>
+                    <li><a href="#" class="und-line">디올 어딕트</a></li>
+                    <li><a href="#" class="und-line">듄</a></li>
+                    <li><a href="#" class="und-line">돌체비타</a></li>
+                    <li><a href="#" class="und-line">무슈 디올의 작품</a></li>
+                  </ul>
+                </div>
+                <div class="wp-detail-sub detail-wrap">
+                  <a href="#"><img src="./img/women_perfume_new.png" alt="miss dior"></a>
+                  <p>미스 디올</p>
+                  <a href="#">자세히 보기</a>
+                  <span class="material-symbols-rounded">chevron_right</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu">
+            <a href="#">남성 향수</a>
+            <div class="sub-menu">
+              <div class="sub-inner">
+                <div class="mp-all-sub all-wrap">
+                  <h2><a href="#" class="und-line">모두 보기</a></h2>
+                  <h2><a href="#" class="und-line">신제품</a></h2>
+                  <h2><a href="#" class="und-line">베스트셀러</a></h2>
+                </div>
+                <div class="mp-collection-sub menu-wrap">
+                  <h2><a href="#" class="und-line">컬렉션</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">소바쥬</a></li>
+                    <li><a href="#" class="und-line">디올옴므</a></li>
+                    <li><a href="#" class="und-line">화렌하이트</a></li>
+                    <li><a href="#" class="und-line">오소바쥬</a></li>
+                    <li><a href="#" class="und-line">하이어</a></li>
+                    <li><a href="#" class="und-line">듄뿌리옴므</a></li>
+                  </ul>
+                </div>
+                <div class="mp-detail-sub detail-wrap">
+                  <a href="#"><img src="./img/men_perfume_new.jpg" alt="sauvage"></a>
+                  <p>소바쥬</p>
+                  <a href="#">자세히 보기<span class="material-symbols-rounded">chevron_right</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu">
+            <a href="#" class="und-line">메이크업</a>
+            <div class="sub-menu">
+              <div class="sub-inner">
+                <div class="makeup-all-sub all-wrap">
+                  <h2><a href="#" class="und-line">모두 보기</a></h2>
+                  <h2><a href="#" class="und-line">신제품</a></h2>
+                  <h2><a href="#" class="und-line">베스트셀러</a></h2>
+                </div>
+                <div class="makeup-face-sub menu-wrap">
+                  <h2><a href="#" class="und-line">페이스</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">파운데이션</a></li>
+                    <li><a href="#" class="und-line">컨실러</a></li>
+                    <li><a href="#" class="und-line">프라이머 & 세팅 스프레이</a></li>
+                    <li><a href="#" class="und-line">하이라이터 & 루미나이저</a></li>
+                    <li><a href="#" class="und-line">블러쉬 & 브론저</a></li>
+                    <li><a href="#" class="und-line">파우더</a></li>
+                  </ul>
+                </div>
+                <div class="makeup-eye-sub menu-wrap">
+                  <h2><a href="#" class="und-line">아이</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">아이섀도우</a></li>
+                    <li><a href="#" class="und-line">아이라이너</a></li>
+                    <li><a href="#" class="und-line">아이브로우</a></li>
+                    <li><a href="#" class="und-line">마스카라</a></li>
+                  </ul>
+                </div>
+                <div class="makeup-lip-sub menu-wrap">
+                  <h2><a href="#" class="und-line">립</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">립스틱</a></li>
+                    <li><a href="#" class="und-line">글로스 & 플럼퍼</a></li>
+                    <li><a href="#" class="und-line">립 잉크</a></li>
+                    <li><a href="#" class="und-line">립밤 & 립 케어</a></li>
+                    <li><a href="#" class="und-line">립 펜슬</a></li>
+                  </ul>
+                </div>
+                <div class="makeup-nail-sub menu-wrap">
+                  <h2><a href="#" class="und-line">네일</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">네일 라커</a></li>
+                    <li><a href="#" class="und-line">네일 케어</a></li>
+                  </ul>
+                </div>
+                <div class="makeup-tool-sub menu-wrap">
+                  <h2><a href="#" class="und-line">툴</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">브러쉬</a></li>
+                    <li><a href="#" class="und-line">악세서리</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu">
+            <a href="#" class="und-line">스킨케어</a>
+            <div class="sub-menu">
+              <div class="sub-inner">
+                <div class="skincare-all-sub all-wrap">
+                  <h2><a href="#" class="und-line">모두 보기</a></h2>
+                  <h2><a href="#" class="und-line">신제품</a></h2>
+                  <h2><a href="#" class="und-line">베스트셀러</a></h2>
+                </div>
+                <div class="skincare-category-sub menu-wrap">
+                  <h2><a href="#" class="und-line">카테고리</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">클렌저</a></li>
+                    <li><a href="#" class="und-line">로션</a></li>
+                    <li><a href="#" class="und-line">에센스</a></li>
+                    <li><a href="#" class="und-line">크림</a></li>
+                    <li><a href="#" class="und-line">아이 & 립 케어</a></li>
+                    <li><a href="#" class="und-line">UV 프로텍션</a></li>
+                    <li><a href="#" class="und-line">스크럽 & 마스크</a></li>
+                  </ul>
+                </div>
+                <div class="skincare-problem-sub menu-wrap">
+                  <h2><a href="#" class="und-line">피부 고민</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">피부 개선 효과</a></li>
+                    <li><a href="#" class="und-line">브라이트닝</a></li>
+                    <li><a href="#" class="und-line">안티에이징</a></li>
+                    <li><a href="#" class="und-line">수분/보습</a></li>
+                  </ul>
+                </div>
+                <div class="skincare-collection-sub menu-wrap">
+                  <h2><a href="#" class="und-line">컬렉션</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">로드비</a></li>
+                    <li><a href="#" class="und-line">디올 프레스티지</a></li>
+                    <li><a href="#" class="und-line">캡춰 토탈</a></li>
+                    <li><a href="#" class="und-line">캡춰 유쓰</a></li>
+                    <li><a href="#" class="und-line">캡춰 드림스킨</a></li>
+                    <li><a href="#" class="und-line">원 에센셜</a></li>
+                    <li><a href="#" class="und-line">디올 스노우</a></li>
+                    <li><a href="#" class="und-line">디올 하이드라 라이프</a></li>
+                    <li><a href="#" class="und-line">디올 옴므 더모 시스템</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu">
+            <a href="#" class="und-line">컬렉션</a>
+            <div class="sub-menu">
+              <div class="sub-inner">
+                <div class="collection-all-sub all-wrap">
+                  <h2><a href="#" class="und-line">모두 보기</a></h2>
+                  <h2><a href="#" class="und-line">신제품</a></h2>
+                  <h2><a href="#" class="und-line">베스트셀러</a></h2>
+                </div>
+                <div class="collection-perfume-sub menu-wrap">
+                  <h2><a href="#" class="und-line">향수</a></h2>
+                </div>
+                <div class="collection-bath_body-sub menu-wrap">
+                  <h2><a href="#" class="und-line">배스 & 바디</a></h2>
+                  <ul>
+                    <li><a href="#" class="und-line">크림</a></li>
+                    <li><a href="#" class="und-line">핸드 & 크림</a></li>
+                    <li><a href="#" class="und-line">솝</a></li>
+                  </ul>
+                </div>
+                <div class="collection-candle-sub menu-wrap">
+                  <h2><a href="#" class="und-line">캔들</a></h2>
+                </div>
+                <div class="collection-detail-sub detail-wrap">
+                  <a href="#"><img src="./img/collection_new.jpg" alt="gris dior"></a>
+                  <p>그리 디올</p>
+                  <a href="#">자세히 보기<span class="material-symbols-rounded">chevron_right</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- section 01 : Youtube Video -->
+  <section class="youtube">
+    <h2 class="hidden">Youtube</h2>
+		<div class="clip-text-video">
+			<video autoplay loop muted playsinline preload="auto" width="100%">
+				<source src="img/MISS DIOR BLOOMING BOUQUET.mp4" type="video/mp4">
+			</video>
+		</div>
+  </section>
+
+  <!-- section 02 : New Products -->
+  <section class="new">
+    <div class="inner"> <!-- 1500px -->
+      <h2>신제품</h2>
+      <div class="new-products">
+        <div>
+          <a href="#"><img src="./img/new_perfume_01_mod.png" alt="블루밍 부케 오 드 뚜왈렛"></a>
+          <h3>미스 디올</h3>
+          <p>블루밍 부케 오 드 뚜왈렛</p>
+          <p>30ml</p>
+          <p>￦115,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_perfume_02_mod.png" alt="디올리비에라 오 드 퍼퓸"></a>
+          <h3>라 콜렉시옹 프리베 크리스챤 디올</h3>
+          <p>디올리비에라 오 드 퍼퓸</p>
+          <p>40ml</p>
+          <p>￦182,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_perfume_03_mod.png" alt="퍼퓸 도 오 드 퍼퓸"></a>
+          <h3>쟈도르</h3>
+          <p>퍼퓸 도 오 드 퍼퓸</p>
+          <p>30ml</p>
+          <p>￦115,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_perfume_04_mod.png" alt="오 드 뚜왈렛"></a>
+          <h3>소바쥬</h3>
+          <p>오 드 뚜왈렛</p>
+          <p>30ml</p>
+          <p>￦100,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_makeup_01_mod.png" alt="컬러 어웨이크닝 립밤"></a>
+          <h3>디올 어딕트 립 글로우</h3>
+          <p>컬러 어웨이크닝 립밤</p>
+          <p>￦48,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_makeup_02_mod.png" alt="아이섀도우 팔레트"></a>
+          <h3>5 꿀뢰르 꾸뛰르</h3>
+          <p>아이섀도우 팔레트</p>
+          <p>￦95,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_makeup_03_mod.png" alt="롱웨어 하이라이팅 파우더"></a>
+          <h3>디올 포에버 꾸뛰르 루미나이저</h3>
+          <p>롱웨어 하이라이팅 파우더</p>
+          <p>￦88,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_makeup_04_mod.png" alt="풀 커버리지 컨실러"></a>
+          <h3>디올 포에버 스킨 코렉트</h3>
+          <p>풀 커버리지 컨실러</p>
+          <p>￦64,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_skincare_01_mod.png" alt="르 세럼"></a>
+          <h3>캡춰 토탈</h3>
+          <p>르 세럼</p>
+          <p>30ml</p>
+          <p>￦155,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_skincare_02_mod.png" alt="라 크렘므 인텐시브 리페어링 크림 텍스처 파인"></a>
+          <h3>디올 프레스티지</h3>
+          <p>라 크렘므 인텐시브 리페어링 크림 텍스처 파인</p>
+          <p>50ml</p>
+          <p>￦550,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_skincare_03_mod.png" alt="핸드 크림"></a>
+          <h3>디올 르 밤</h3>
+          <p>핸드 크림</p>
+          <p>50ml</p>
+          <p>￦80,000</p>
+        </div>
+        <div>
+          <a href="#"><img src="./img/new_skincare_04_mod.png" alt="클렌저 리추얼 세트"></a>
+          <h3>디올 클렌저</h3>
+          <p>클렌저 리추얼 세트</p>
+          <p>50ml</p>
+          <p>￦60,000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 03 : Collection -->
+  <section class="collection scroll-spy">
+    <h3 class="hidden">Collection</h3>
+    <div class="back-to-position to-left delay-0">
+      <img src="./img/collection_text_01.png" alt="라 콜렉시옹 프리베 크리스챤 디올">
+      <img src="./img/collection_text_02.png" alt="그리 디올은 시프레 향수 특유의 플로럴 우디 노트에서 느낄 수 있는 향기 뿐만 아니라, 색채의 조화까지 이뤄낸 작품입니다">
+      <a href="#"><img src="./img/collection_text_03.png" alt="아이코닉 향수의 신비로운 향기를 경험해보세요"></a>
+      <span class="material-symbols-rounded">chevron_right</span>
+    </div>   
+  </section>
+
+  <!-- section 04 : Collection Products -->
+  <section class="collection-products">
+    <h3 class="hidden">Collection Products</h3>
+    <div class="model-swiper">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./img/collection_sub01_mod.png" alt="model img1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/collection_sub02_mod.png" alt="model img2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/collection_sub03_mod.png" alt="model img3">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/collection_sub04_mod.png" alt="model img4">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/collection_sub05_mod.png" alt="model img5">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-swiper">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/collection_01_mod.png" alt="그리 디올 오 드 퍼퓸"></a>
+            <div class="cp-texts">
+              <h3>라 콜렉시옹 프리베 크리스챤 디올</h3>
+              <p>그리 디올 오 드 퍼퓸</p>
+              <p>40ml</p>
+              <p>￦182,000</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/collection_02_mod.png" alt="앙브르 뉘 오 드 퍼퓸"></a>
+            <div class="cp-texts">
+              <h3>라 콜렉시옹 프리베 크리스챤 디올</h3>
+              <p>앙브르 뉘 오 드 퍼퓸</p>
+              <p>40ml</p>
+              <p>￦182,000</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/collection_03_mod.png" alt="쟈스망 데 쟝주 오 드 퍼퓸"></a>
+            <div class="cp-texts">
+              <h3>라 콜렉시옹 프리베 크리스챤 디올</h3>
+              <p>쟈스망 데 쟝주 오 드 퍼퓸</p>
+              <p>40ml</p>
+              <p>￦182,000</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/collection_04_mod.png" alt="쟈스망 데 쟝주 바디 크림"></a>
+            <div class="cp-texts">
+              <h3>라 콜렉시옹 프리베 크리스챤 디올</h3>
+              <p>쟈스망 데 쟝주 바디 크림</p>
+              <p>150ml</p>
+              <p>￦145,000</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/collection_05_mod.png" alt="그리 디올 핸드 바디 로션"></a>
+            <div class="cp-texts">
+              <h3>라 콜렉시옹 프리베 크리스챤 디올</h3>
+              <p>그리 디올 핸드 & 바디 로션</p>
+              <p>350ml</p>
+              <p>￦122,000</p>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev">
+          <img src="./img/icon/prev_icon.png" alt="prev icon">
+        </div>
+        <div class="swiper-button-next">
+          <img src="./img/icon/next_icon.png" alt="next icon">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 05 : Gift & Service -->
+  <section class="gift_service">
+    <div class="inner">
+      <h2>기프트 & 서비스</h2>
+      <div class="gift_service-wrap">
+        <div>
+          <a href="#">
+            <img src="./img/sevice_01_mod.png" alt="디올 뷰티 통합 멤버십 혜택">
+            <p>디올 뷰티 통합 멤버십 혜택</p>
+          </a>
+        </div>
+          <div>
+            <a href="#">
+              <img src="./img/sevice_02_mod.png" alt="향수 카운셀링">
+              <p>향수 카운셀링</p>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="./img/sevice_03_mod.png" alt="각인 아틀리에">
+              <p>각인 아틀리에</p>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="./img/sevice_04_mod.png" alt="아트 오브 기프팅">
+              <p>아트 오브 기프팅</p>
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="contact">
+      <div class="newsletter">
+        <h4>뉴스레터 구독</h4>
+        <p>뉴스레터를 구독하고 관련 소식을 받아 보세요.</p>
+        <div class="input-wrap">
+          <div class="input-email">
+            <label for="e-mail"></label>
+            <input type="email" id="e-mail" placeholder="이메일 주소" onfocus="this.placeholder=''" onblur="this.placeholder='이메일 주소'">
+          </div>
+          <div class="input-personal-info">
+            <input type="checkbox" id="use-of-personal-info">
+            <label for="use-of-personal-info">개인정보 수집 및 이용에 동의합니다.</label>
+          </div>
+          <div class="input-ad-info">
+            <input type="checkbox" id="receive-advertising-info">
+            <label for="receive-advertising-info">광고성 정보 수신에 동의합니다.</label>
+          </div>
+        </div>
+        <a href="#">구독하기</a>
+      </div>
+      <div class="our-boutiques">
+        <h4>부띠크 찾기</h4>
+        <ul>
+          <li><a href="#">Christian Dior Couture 부티크</a></li>
+          <li><a href="#">Parfums Christian Dior 부티크</a></li>
+        </ul>
+      </div>
+      <div class="client-service">
+        <h4>고객 서비스</h4>
+        <ul>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">배송 및 반품</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="the-house-of-dior">
+        <h4>디올 하우스</h4>
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <h4>소셜 미디어</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="info">
+      <address>
+        엘브이엠에치코스메틱스(유) | 03155 서울특별시 종로구 종로3길 17, 11층 (청진동, 광화문 D타워) | 사업자등록번호: 214-81-64219 <br>
+        대표자: 아리엔젤인젠츠부르거,BERNARD BOUISSIERES NICOLAS FERNAND JA | 통신판매업 신고번호: 2018-서울종로-1505 | 사업자정보확인 <br>
+        개인정보관리책임자: Lucien FOISY | 고객센터: 080-342-9500 contact@dior.co.kr | 호스팅 서비스: Shopify
+      </address>
+    </div>
+  </footer>
+
+  <!-- To-top Button -->
+  <div id="to-top">
+    <span class="material-symbols-rounded">arrow_upward</span>
+  </div>
+</body>
+</html>

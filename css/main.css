@@ -1,0 +1,419 @@
+@charset "UFT-8";
+
+.inner {
+  width: 1500px;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  background-color: transparent;
+  z-index: 3;
+  transition: all 0.4s ease-out;
+}
+header .top-header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top-header .location-icon {
+  width: 17px;
+  height: 23px;
+}
+header .top-header h1 {
+  margin: auto;
+}
+header .top-header h1 a img {
+  width: 160px;
+}
+header .top-header .icon-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .top-header .icon-left {
+  width: 160px;
+}
+header .top-header .icon-right {
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+}
+header .top-header .search-icon {
+  width: 21px;
+  height: 22px;
+}
+header .top-header .wishlist-icon {
+  width: 24px;
+  height: 22px;
+}
+header .top-header .user-icon {
+  width: 21.31px;
+  height: 21.49px;
+}
+header .top-header .cart-icon {
+  width: 21.5px;
+  height: 20.92px;
+}
+
+header nav .gnb {
+  width: 630px;
+  height: 60px;
+  margin: auto;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .gnb .main-menu > a {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0 30px;
+}
+header nav .gnb .main-menu .sub-menu {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  background-color: #fff;
+  display: none;
+  transition: all 0.4s ease-out;
+}
+header nav .gnb .main-menu:hover .sub-menu {
+  display: block;
+}
+header nav .gnb .main-menu .sub-inner {
+  display: flex;
+  padding: 50px 450px;
+  justify-content: space-between;
+}
+header nav .gnb .main-menu .all-wrap {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+header nav .gnb .main-menu .sub-menu .sub-inner .all-wrap > h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+header nav .gnb .main-menu .sub-menu .sub-inner .all-wrap a {
+  position: relative;
+}
+header nav .gnb .main-menu .sub-menu .sub-inner .all-wrap a.und-line::after,
+header nav .gnb .main-menu .sub-menu .sub-inner .menu-wrap a.und-line::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  background: #0f0f0f;
+  opacity: 0.6;
+  transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+header nav .gnb .main-menu .sub-menu .sub-inner .all-wrap a.und-line:hover::after,
+header nav .gnb .main-menu .sub-menu .sub-inner .menu-wrap a.und-line:hover::after {
+  width: 100%;
+  opacity: .9;
+}
+
+header nav .gnb .main-menu .menu-wrap {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+header nav .gnb .main-menu .menu-wrap h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+header nav .gnb .main-menu .menu-wrap a {
+  position: relative;
+}
+header nav .gnb .main-menu .menu-wrap ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+header nav .gnb .main-menu .detail-wrap p {
+  margin-top: 10px;
+}
+header nav .gnb .main-menu .detail-wrap span {
+  position: absolute;
+  top: 281px;
+  right: 710px;
+  font-size: 20px;
+}
+header nav .gnb .main-menu .detail-wrap:nth-of-type(3) a:hover {
+  text-decoration: underline;
+}
+
+header nav .gnb .main-menu .sub-inner .makeup-face-sub {
+  width: 160px;
+}
+header nav .gnb .main-menu .sub-inner .skincare-collection-sub {
+  width: 140px;
+}
+
+header.scroll {
+  background-color: #fff;
+}
+header.hovered {
+  background-color: #fff;
+}
+
+/* section 01 : Youtube Video */
+.youtube .clip-text-video {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.youtube .clip-text-video video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* section 02 : New Products */
+.new .inner {
+  margin: auto;
+  height: 700px;
+}
+.new .inner h2 {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.new .inner .new-products {
+  width: 1500px;
+  height: 500px;
+  margin: auto;
+}
+.new .inner .new-products div img {
+  width: 100%;
+  padding: 50px 40px 20px;
+}
+.new .inner .new-products div {
+  text-align: center;
+}
+.new .inner .new-products div h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.new .inner .new-products div p {
+  font-size: 15px;
+}
+.new .inner .new-products div p:last-of-type {
+  font-weight: 700;
+}
+
+/* section 03 : Collection */
+.collection {
+  width: 100%;
+  height: 600px;
+  background: url(../img/collection_main.jpg) center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.collection div {
+  width: 480px;
+  height: 130px;
+  position: absolute;
+  right: 120px;
+  top: 240px;
+}
+.collection div > a {
+  width: 333px;
+}
+.collection div span {
+  cursor: pointer;
+}
+.collection div img:nth-of-type(2) {
+  margin: 15px 0 20px;
+}
+.collection div span {
+  position: relative;
+  left: 335px;
+  bottom: 20px;
+}
+
+/* scroll Magic으로 연결할 css */
+/* 맨 처음 브라우저 로딩 시 안보이게 설정 */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+/* 오른쪽에서 왼쪽으로 등장하는 모션의 시작위치 */
+.back-to-position.to-left {
+  transform: translateX(200px);
+}
+/* show 추가 되면 실행할 모션 */
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* show 추가 되면 실행할 모션 */
+.show .back-to-position.delay-0 {
+  transition-delay: 0;
+}
+
+/* section 04 : Collection Products */
+.collection-products {
+  width: 100%;
+  height: 600px;
+  display: flex;
+}
+.collection-products .model-swiper {
+  width: 50%;
+}
+.collection-products .prod-swiper {
+  width: 50%;
+  padding: 40px 200px;
+}
+.collection-products .prod-swiper .swiper {
+  width: 100%;
+  height: 520px;
+}
+.collection-products .prod-swiper .swiper .swiper-wrapper .swiper-slide a {
+  display: flex;
+  justify-content: center;
+}
+.collection-products .prod-swiper .swiper .swiper-wrapper .swiper-slide .cp-texts {
+  text-align: center;
+}
+.collection-products .prod-swiper .swiper .swiper-wrapper .swiper-slide .cp-texts h3 {
+  font-size: 16px;
+  margin: 15px 0 5px;
+}
+.collection-products .prod-swiper .swiper .swiper-wrapper .swiper-slide .cp-texts p {
+  font-size: 15px;
+}
+.collection-products .prod-swiper .swiper .swiper-wrapper .swiper-slide div p:last-of-type {
+  font-weight: 700;
+}
+.swiper-button-next img, .swiper-button-prev img {
+  filter: opacity(.2) drop-shadow(0 0 0 #ffffff);
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+.collection-products .prod-swiper .swiper .swiper-pagination-bullet {
+  background: url(../img/icon/pager_icon.png) no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+.collection-products .prod-swiper .swiper .swiper-pagination-bullet-active {
+  background: url(../img/icon/pager_on_icon.png) no-repeat center;
+}
+
+/* section 05 : Gift & Service */
+.gift_service .inner {
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 85px 0 110px;
+}
+.gift_service .inner h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 45px;
+}
+.gift_service .inner .gift_service-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.gift_service .inner .gift_service-wrap div p {
+  font-size: 18px;
+  margin-top: 35px;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 600px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #c2c2c2;
+  color: #5c5d5f;
+}
+footer a {
+  color: #5c5d5f;
+}
+footer .contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 100px;
+}
+footer .contact h4 {
+  margin-bottom: 20px;
+}
+footer .contact .newsletter p {
+  margin-bottom: 77px;
+}
+footer .contact .newsletter .input-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+footer .contact .newsletter #e-mail {
+  border: none;
+  border-bottom: 1px solid #5c5d5f;
+  width: 350px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+footer .contact .newsletter #e-mail::placeholder {
+  font-size: 12px;
+}
+footer .contact .newsletter .input-wrap .input-email input:focus {
+  outline: none;
+}
+footer .contact .newsletter > a {
+  display: inline-block;
+}
+footer .contact .newsletter > a:hover {
+  text-decoration: underline;
+}
+footer .contact ul li {
+  margin-bottom: 5px;
+}
+footer .info {
+  border-top: 1px solid #c2c2c2;
+  padding: 60px 100px;
+}
+footer .info address {
+  text-align: center;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+/* To-top Button */
+#to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #333;
+  opacity: .4;
+  z-index: 10;
+}
+#to-top span {
+  color: #fff;
+}
